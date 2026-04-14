@@ -26,7 +26,7 @@ h1 {
 }
 
 #cont {
-    background: #2e7d32;
+    background: #3d9c42;
     border-radius: 20px;
     padding: 35px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -41,7 +41,7 @@ h1 {
     font-size: 0.9rem;
     margin-bottom: 25px;
     padding: 10px;
-    background: #1b5e20;
+    background: rgb(90, 161, 94);
     border-radius: 10px;
     font-weight: 500;
 }
@@ -150,15 +150,15 @@ input::placeholder {
 }
 
 .sugestoes-container::-webkit-scrollbar-thumb:hover {
-    background: #1b5e20;
+    background: rgb(90, 161, 94);
 }
 
 /* Botão converter */
 #btn {
     width: 100%;
     padding: 14px;
-    background: #ffeb3b;
-    color: #1b5e20;
+    background: #0a7c13;
+    color: #b7ffbb;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -171,7 +171,7 @@ input::placeholder {
 }
 
 #btn:hover {
-    background: #fdd835;
+    background: #0e6916;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -184,14 +184,14 @@ input::placeholder {
 #res {
     margin-top: 25px;
     padding: 18px;
-    background: #1b5e20;
-    color: #ffeb3b;
+    background: rgb(90, 161, 94);
+    color: #f3fff4;
     border-radius: 12px;
     text-align: center;
     font-size: 1.15rem;
     font-weight: 600;
     word-wrap: break-word;
-    border-left: 4px solid #ffeb3b;
+    border-left: 4px solid #0a7c13;
 }
 
 /* Responsividade - em telas pequenas volta a ficar embaixo */
