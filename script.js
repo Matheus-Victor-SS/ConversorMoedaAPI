@@ -6,6 +6,22 @@ const sugestoes2 = document.getElementById("sugestoes2")
 let moedasLista = []
 let inputAtivo = null
 let sugestoesAtivas = null
+
+
+function Atualizar() {
+    var data = document.getElementById('data')
+    var date = new Date()
+    //padStart preenche a string com 0 ate antigir 2 caracteres
+    var dia = String(date.getDate()).padStart(2, '0')
+    //auemnta 1 pois começa com Janeiro=0
+    var mes = String(date.getMonth() + 1).padStart(2, '0')//adiciona 0 a esquerda
+    var ano = date.getFullYear()
+    
+    data.innerHTML = `${dia}/${mes}/${ano}`
+}
+
+setInterval(Atualizar, 1000)
+
 //bandeiras com código do país
 const mapaMoedaPais = {
     USD: "us",
