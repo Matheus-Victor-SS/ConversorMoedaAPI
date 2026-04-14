@@ -1,10 +1,11 @@
 const input1 = document.getElementById("moeda1")
 const input2 = document.getElementById("moeda2")
-const sugestoes = document.getElementById("sugestoes")
+const sugestoes1 = document.getElementById("sugestoes1")
+const sugestoes2 = document.getElementById("sugestoes2")
 
-let moedasLista = []//armazena as moedas da api
-let inputAtivo = null //armazena o input do usuario
-
+let moedasLista = []
+let inputAtivo = null
+let sugestoesAtivas = null
 //bandeiras com código do país
 const mapaMoedaPais = {
     USD: "us",
@@ -64,46 +65,46 @@ async function pegarMoedas() {
     }
 }
 
-function mostrarMoedas(lista) {
-    sugestoes.innerHTML = ''//limpa a lista antes
+// Função para mostrar sugestões no container correto
+function mostrarMoedas(lista, container) {
+    container.innerHTML = ''
 
     lista.forEach(moeda => {
-        const div = document.createElement("div")//cria uma opção para cada moeda
+        const div = document.createElement("div")
         const bandeira = getBandeira(moeda.codigo)
-        //exibe sigla, nome e bandeira
-        div.innerHTML = `<strong>${bandeira} ${moeda.codigo}</strong> - ${moeda.nome}`
-        
-        div.style.cursor = "pointer"
-        div.style.padding = "8px"
-        div.style.borderBottom = "1px solid #ddd"
-        
-        //efeito hover
-        div.onmouseover = () => {
-            div.style.backgroundColor = "#f0f0f0"
-        }
-        div.onmouseout = () => {
-            div.style.backgroundColor = "transparent"
-        }
+        div.innerHTML = `${moeda.codigo} ${bandeira} - ${moeda.nome}`
         
         div.onclick = () => {
             inputAtivo.value = moeda.codigo
-            sugestoes.innerHTML = ''
+            container.innerHTML = ''
         }
-        //pega o resultado escolhido
-        sugestoes.appendChild(div)
+        
+        container.appendChild(div)
     })
 }
-//quando cada input estiver selecionado chama a função de mostrarMoedas
+
+// Eventos dos inputs
 input1.addEventListener("focus", () => {
     inputAtivo = input1
-    mostrarMoedas(moedasLista)
+    sugestoesAtivas = sugestoes1
+    mostrarMoedas(moedasLista, sugestoes1)
 })
 
 input2.addEventListener("focus", () => {
     inputAtivo = input2
-    mostrarMoedas(moedasLista)
+    sugestoesAtivas = sugestoes2
+    mostrarMoedas(moedasLista, sugestoes2)
 })
 
+// Fechar sugestões ao clicar fora
+document.addEventListener("click", (e) => {
+    if (!input1.contains(e.target) && !sugestoes1.contains(e.target)) {
+        sugestoes1.innerHTML = ''
+    }
+    if (!input2.contains(e.target) && !sugestoes2.contains(e.target)) {
+        sugestoes2.innerHTML = ''
+    }
+})
 function converter() {
     const valor = document.getElementById("quant").value
     const moeda1 = input1.value

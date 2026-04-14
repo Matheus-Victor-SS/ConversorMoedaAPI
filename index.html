@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>CONVERSOR</h1>
     <div id="cont">
         <p id="data"></p>
-        <input type="number" id="quant">
-        <input type="text" id="moeda1" placeholder="Escolha a Moeda">
-        <input type="text" id="moeda2" placeholder="Escolha a Moeda">
-        <div id="sugestoes"></div>
-        <input type="button" value="converter" id="btn" onclick="converter()">
+        <input type="number" id="quant" placeholder="Digite o valor">
+        
+        <div class="input-group">
+            <label> MOEDA ORIGEM</label>
+            <input type="text" id="moeda1" placeholder="Escolha a moeda" autocomplete="off">
+            <div id="sugestoes1" class="sugestoes-container"></div>
+        </div>
+        
+        <div class="input-group">
+            <label> MOEDA DESTINO</label>
+            <input type="text" id="moeda2" placeholder="Escolha a moeda" autocomplete="off">
+            <div id="sugestoes2" class="sugestoes-container"></div>
+        </div>
+        
+        <input type="button" value="CONVERTER" id="btn" onclick="converter()">
         <p id="res"></p>
     </div>
     <script src="script.js"></script>
