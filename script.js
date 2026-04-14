@@ -17,7 +17,7 @@ function Atualizar() {
     var mes = String(date.getMonth() + 1).padStart(2, '0')//adiciona 0 a esquerda
     var ano = date.getFullYear()
     
-    data.innerHTML = `${dia}/${mes}/${ano}`
+    data.innerHTML = `Atualizado em: ${dia}/${mes}/${ano}`
 }
 
 setInterval(Atualizar, 1000)

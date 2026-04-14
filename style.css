@@ -18,7 +18,7 @@ body {
 h1 {
     text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 60px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -26,13 +26,13 @@ h1 {
 }
 
 #cont {
-    background: #3d9c42;
+    background: #519e55;
     border-radius: 20px;
     padding: 35px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     max-width: 700px;
     width: 100%;
-    border: 1px solid #4caf50;
+    border: 1px solid #4c9b4f;
 }
 
 #data {
@@ -41,7 +41,7 @@ h1 {
     font-size: 0.9rem;
     margin-bottom: 25px;
     padding: 10px;
-    background: rgb(90, 161, 94);
+    background: rgb(94, 163, 98);
     border-radius: 10px;
     font-weight: 500;
 }
@@ -71,7 +71,7 @@ h1 {
 input {
     width: 100%;
     padding: 14px 15px;
-    border: 2px solid #4caf50;
+    border: 2px solid #4b994d;
     border-radius: 12px;
     font-size: 0.95rem;
     transition: all 0.2s ease;
@@ -83,7 +83,7 @@ input {
 }
 
 input:focus {
-    border-color: #ffeb3b;
+    border-color: #005507;
     box-shadow: 0 0 0 3px rgba(255,235,59,0.2);
 }
 
@@ -95,7 +95,7 @@ input::placeholder {
 #quant {
     font-size: 1.1rem;
     margin-bottom: 25px;
-    border-color: #4caf50;
+    border-color: #3a8a3d;
     background: white;
 }
 
@@ -157,8 +157,8 @@ input::placeholder {
 #btn {
     width: 100%;
     padding: 14px;
-    background: #0a7c13;
-    color: #b7ffbb;
+    background: #257e2d;
+    color: #d8ffda;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -171,7 +171,7 @@ input::placeholder {
 }
 
 #btn:hover {
-    background: #0e6916;
+    background: #195e1f;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -191,7 +191,6 @@ input::placeholder {
     font-size: 1.15rem;
     font-weight: 600;
     word-wrap: break-word;
-    border-left: 4px solid #0a7c13;
 }
 
 /* Responsividade - em telas pequenas volta a ficar embaixo */
