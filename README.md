@@ -2,33 +2,48 @@
 
 Um conversor de moedas simples e intuitivo que utiliza dados atualizados em tempo real através de API.
 
-## 🚀 Funcionalidades
+## ✨ Funcionalidades
 
 - **Conversão em tempo real** - Taxas de câmbio atualizadas via API
 - **Busca de moedas** - Ao clicar nos campos, aparecem sugestões de todas as moedas disponíveis
 - **Bandeiras dos países** - Visualização das bandeiras ao lado de cada moeda
 - **Interface amigável** - Design limpo e responsivo com tema verde
-- **Data e hora atual** - Exibição da data e horário em tempo real
+- **Data atual** - Exibição da data em tempo real
+- **Inputs lado a lado** - Layout otimizado com campos de origem e destino paralelos
+- **Autocomplete desabilitado** - Evita sugestões indesejadas do navegador
 
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
-- CSS3
-- JavaScript (Vanilla)
+- CSS3 
+- JavaScript
 - [Freecurrencyapi](https://freecurrencyapi.com/) - API de taxas de câmbio
 
-## 📋 Como usar
+## 🎯 Como usar
 
-1. Digite o valor que deseja converter
-2. Clique no campo "MOEDA ORIGEM" e escolha a moeda de origem
-3. Clique no campo "MOEDA DESTINO" e escolha a moeda de destino
+1. Digite o valor que deseja converter no campo superior
+2. Clique no campo "DE" e escolha a moeda de origem na lista de sugestões
+3. Clique no campo "PARA" e escolha a moeda de destino na lista de sugestões
 4. Clique no botão "CONVERTER"
-5. O resultado aparecerá automaticamente na tela
+5. O resultado aparecerá automaticamente na tela com as respectivas bandeiras
 
-## 📦 Instalação
+## 📱 Responsividade
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/conversor-moedas.git
+O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
+- **Desktop:** Inputs lado a lado
+- **Mobile:** Inputs empilhados verticalmente para melhor usabilidade
 
-# Abra o arquivo index.html no seu navegador
+## 🌟 Diferenciais
+
+- Sugestões personalizadas sem interferência do autocomplete do navegador
+- Bandeiras emoji para identificação rápida dos países
+- Atualização automática da data e hora
+- Interface limpa sem elementos desnecessários
+
+## 📄 Licença
+
+MIT
+
+---
+
+Desenvolvido por Matheus Victor
